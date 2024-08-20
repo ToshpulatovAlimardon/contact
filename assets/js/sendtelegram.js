@@ -1,9 +1,9 @@
 //bot token
-var telegram_bot_id = "6432131217:AAHXQlMnOmREGkNwxYqaJ0uVbESAonVLd70"; 
+let telegram_bot_id = "6432131217:AAHXQlMnOmREGkNwxYqaJ0uVbESAonVLd70"; 
 //chat id
-var chat_id = 1267012660;
-var u_name, email, message, tel, subject;
-var ready = function() {
+let chat_id = 1267012660;
+let u_name, email, message, tel, subject;
+let ready = function() {
     u_name = document.getElementById("name").value;
     email = document.getElementById("email").value;
     tel = document.getElementById("tel").value;
@@ -11,9 +11,9 @@ var ready = function() {
     message = document.getElementById("message").value;
     message = "Ismi: " + u_name + "\nEmail: " + email + "\nTelefon: " + tel + "\nFan: " + subject + "\nIzoh: " + message;
 };
-var sendtelegram = function() {
+let sendtelegram = function() {
     ready();
-    var settings = {
+    let settings = {
         "async": true,
         "crossDomain": true,
         "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
